@@ -1,42 +1,133 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300..700&display=swap');
+
+:root {
+  --primary-color: #4CAF50;
+  --danger-color: #F44336;
+  --background-color: #1e1e1e;
+  --text-color: #ffffff;
+  --card-color: #333;
+  --input-bg-color: #444;
+  --input-border-color: #555;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.container {
+  padding: 20px;
+  border-radius: 10px;
+  width: 350px;
+}
+
+h2 {
   text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.balance {
+  text-align: center;
+  margin: 20px 0;
+  background-color: var(--card-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inc-exp-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  background-color: var(--card-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.money {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px 0;
 }
 
-.card {
-  padding: 2em;
+.money.plus {
+  color: var(--primary-color);
 }
 
-.read-the-docs {
-  color: #888;
+.money.minus {
+  color: var(--danger-color);
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.list li {
+  background-color: var(--card-color);
+  padding: 10px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  border-left: 5px solid transparent;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.list li.plus {
+  border-left-color: var(--primary-color);
+}
+
+.list li.minus {
+  border-left-color: var(--danger-color);
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-control {
+  margin: 10px 0;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid var(--input-border-color);
+  background-color: var(--input-bg-color);
+  color: var(--text-color);
+}
+
+.btn {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #45a049;
 }

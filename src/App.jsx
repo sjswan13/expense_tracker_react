@@ -9,7 +9,7 @@ const App = () => {
   const [amount, setAmount] = useState('');
 
   useEffect(() => {
-    localStorage.setItem('transactions, JSON.stringify(transactions)');
+    localStorage.setItem('transactions', JSON.stringify(transactions));
   }, [transactions]);
 
   const addTransaction = (e) => {
